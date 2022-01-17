@@ -12,6 +12,7 @@
 <body>
     
     <div id="app">
+
         <div class="container">
             <div class="input-container">
                 <input v-model="temporaryItem.text" @keyup.enter="addItem" type="text">
@@ -21,14 +22,15 @@
                 <ul>
                     <li v-for="(item, i) in list">
                         <div class="row">
-                            <span :class="['col-4', list[i].done ? 'done' : '']"> {{list[i].text}}</span>
-                            <div class="col-4"><input v-model="list[i].done" type="checkbox">{{list[i].done}}</div>
+                            <span :class="['col-4', item.done ? 'done' : '']"> {{item.text}}</span>
+                            <div class="col-4"><input v-model="item.done" type="checkbox">{{item.done}}</div>
                             <div @click="removeItem(i)" class="col-4">X</div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
+        
     </div>
 
     <script src="js/script.js"></script>
