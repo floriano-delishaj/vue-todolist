@@ -21,9 +21,9 @@
                 <ul>
                     <li v-for="(item, i) in list">
                         <div class="row">
-                            <span :class="getClasses(i)"> {{list[i].text}}</span>
+                            <span :class="['col-4', list[i].done ? 'done' : '']"> {{list[i].text}}</span>
                             <div class="col-4"><input v-model="list[i].done" type="checkbox">{{list[i].done}}</div>
-                            <div @click="removeItem(i)" class="col-4 remove">X</div>
+                            <div @click="removeItem(i)" class="col-4">X</div>
                         </div>
                     </li>
                 </ul>
