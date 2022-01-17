@@ -28,13 +28,6 @@ new Vue({
         removeItem: function(index){
             this.list.splice(index, 1)
         },
-        getClasses: function(index) {
-            let classes = 'col-4';
-            if (this.list[index].done) {
-                classes += ' done'
-            }
-            return classes;
-        },
         addItem: function(){
             this.list.push(this.temporaryItem)
             this.temporaryItem = {
