@@ -26,11 +26,16 @@ new Vue({
             this.list.splice(index, 1)
         },
         addItem: function(){
+
+            if (this.temporaryItem !== '') {
             this.list.push({
                 text: this.temporaryItem,
                 done: false,
             })
             this.temporaryItem = ''
+            } else {
+                alert('La TODO list non può essere vuota!')
+            }
         }
     }
 })
