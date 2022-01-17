@@ -15,7 +15,7 @@
 
         <div class="container">
             <div class="input-container">
-                <input v-model="temporaryItem.text" @keyup.enter="addItem" type="text">
+                <input v-model="temporaryItem" @keyup.enter="addItem" type="text">
                 <div @click="addItem"class="button">Add Todo</div>
             </div>
             <div class="list-container">
@@ -30,7 +30,7 @@
                 </ul>
             </div>
         </div>
-        
+
     </div>
 
     <script src="js/script.js"></script>

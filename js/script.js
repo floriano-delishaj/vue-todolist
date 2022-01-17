@@ -19,21 +19,18 @@ new Vue({
                 done: true
             }
         ],
-        temporaryItem: {
-            text: '',
-            done: false
-        }
+        temporaryItem: ''
     },
     methods: {
         removeItem: function(index){
             this.list.splice(index, 1)
         },
         addItem: function(){
-            this.list.push(this.temporaryItem)
-            this.temporaryItem = {
-                text: '',
-                done: false
-            }
+            this.list.push({
+                text: this.temporaryItem,
+                done: false,
+            })
+            this.temporaryItem = ''
         }
     }
 })
